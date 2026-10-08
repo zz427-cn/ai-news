@@ -2,7 +2,7 @@ name: Update AI news
 
 on:
   schedule:
-    - cron: "17 1 * * *"  # UTC 01:17 = 北京 09:17，冷门分钟避开高峰（Actions 可能另有延迟）
+    - cron: "43 22 * * *"  # UTC 22:43 = 北京 06:43，冷门分钟；加 Actions 延迟后约 7 点前后更新完成
   workflow_dispatch:
 
 permissions:
