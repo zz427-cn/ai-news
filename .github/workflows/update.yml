@@ -2,7 +2,11 @@ name: Update AI news
 
 on:
   schedule:
-    - cron: "23 0 * * *"  # UTC 00:23 = 北京 08:23。数据源每天北京 08:00 出当天期，出稿后立刻抓取
+    # 数据源每天北京 08:00 出稿。UTC 午夜是 GitHub 调度洪峰，延迟不可控，
+    # 故设三个冗余触发点（北京 08:23 / 08:40 / 09:10），首个成功即可；重复跑无变化时自动跳过
+    - cron: "23 0 * * *"
+    - cron: "40 0 * * *"
+    - cron: "10 1 * * *"
   workflow_dispatch:
 
 permissions:
