@@ -11,8 +11,9 @@ import urllib.request
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-API = "https://aihot.virxact.com/api/public/daily"
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+API_V1 = "https://aihot.news/api/v1/dailies/latest"
+API_LEGACY = "https://aihot.virxact.com/api/public/daily"
+UA = "aihot-api/2.0.0 ai-news-site/1.0"
 ROOT = Path(__file__).resolve().parent.parent
 ARCHIVE = ROOT / "archive"
 SITE_NAME = "AI 热点日报"
@@ -20,10 +21,39 @@ SITE_NAME = "AI 热点日报"
 TZ = timezone(timedelta(hours=8))  # 北京时间
 
 
+def _norm_item(it):
+    """v1 字段 → 旧字段名（sourceUrl/sourceName），兼容旧渲染逻辑"""
+    if "sourceUrl" in it or "sourceName" in it:
+        return it
+    src = it.get("source") or {}
+    links = it.get("links") or {}
+    url = links.get("original") or links.get("aihot") or ""
+    return {
+        **it,
+        "sourceUrl": url,
+        "sourceName": (src.get("name") if isinstance(src, dict) else str(src)) or "",
+        "publishedAt": it.get("publishedAt") or it.get("discoveredAt") or "",
+    }
+
+
 def fetch_daily():
-    req = urllib.request.Request(API, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.load(r)
+    """优先 v1 新接口，失败自动回退旧接口（旧接口 2026-10-31 停用）"""
+    try:
+        req = urllib.request.Request(API_V1, headers={"User-Agent": UA, "Accept-Encoding": "identity"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            payload = json.load(r)
+        d = payload.get("report", payload)
+        d["sections"] = [
+            {**s, "items": [_norm_item(i) for i in s.get("items", [])]}
+            for s in d.get("sections", [])
+        ]
+        d["flashes"] = [_norm_item(f) for f in d.get("flashes", [])]
+        return d
+    except Exception as e:
+        print(f"v1 接口失败（{e}），回退旧接口")
+        req = urllib.request.Request(API_LEGACY, headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.load(r)
 
 
 def esc(s):
@@ -107,11 +137,11 @@ def build_page(d, archive_items_html="", is_archive=False):
 
     date = d["date"]
     pretty = f"{date[0:4]} 年 {int(date[5:7])} 月 {int(date[8:10])} 日"
-
-    date = d["date"]
-    pretty = f"{date[0:4]} 年 {int(date[5:7])} 月 {int(date[8:10])} 日"
     prefix = "../" if is_archive else ""
     vol_extra = "" if is_archive else " · 最新"
+    # 首页带实时拉取脚本（打开时浏览器直接调 API 显示最新期），归档页保持纯静态
+    live_js = "" if is_archive else '<script src="assets/live.js" defer></script>'
+    live_badge = "" if is_archive else '<span id="sync-status" class="sync"></span>'
 
     return f'''<!DOCTYPE html>
 <html lang="zh-CN">
@@ -131,19 +161,22 @@ def build_page(d, archive_items_html="", is_archive=False):
 </header>
 
 <div class="wrap">
-  <div class="date-bar"><span class="dot"></span>{esc(pretty)}<span class="vol">第 {esc(date)} 期{vol_extra}</span></div>
+  <div class="date-bar" id="date-bar"><span class="dot"></span>{esc(pretty)}{live_badge}<span class="vol">第 {esc(date)} 期{vol_extra}</span></div>
   {lead_html}
+  <div id="live-content">
   {sections}
   {flash}
+  </div>
   <section class="board" id="archive-nav"><h2>往期回顾</h2><ul class="arch-list">{archive_items_html}</ul></section>
 </div>
 
 <footer>
   <div class="wrap">
-    <p>数据来源 <a href="https://aihot.virxact.com" target="_blank" rel="noopener noreferrer">AIHOT</a> · 本站为公开信息聚合，版权归原作者所有</p>
-    <p>Powered by GitHub Pages · 每日自动更新</p>
+    <p>数据来源 <a href="https://aihot.news" target="_blank" rel="noopener noreferrer">AIHOT</a> · 本站为公开信息聚合，版权归原作者所有</p>
+    <p>Powered by GitHub Pages · 打开时实时同步最新期</p>
   </div>
 </footer>
+{live_js}
 </body>
 </html>'''
 
