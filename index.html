@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 热点日报 · 2026-11-25</title>
+<title>AI 热点日报 · 2026-11-26</title>
 <meta name="description" content="AI 行业每日热点精选：模型发布、产品更新、行业动态、论文研究、技巧观点">
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -16,130 +16,122 @@
 </header>
 
 <div class="wrap">
-  <div class="date-bar" id="date-bar"><span class="dot"></span>2026 年 11 月 25 日<span id="sync-status" class="sync"></span><span class="vol">第 2026-11-25 期 · 最新</span></div>
+  <div class="date-bar" id="date-bar"><span class="dot"></span>2026 年 11 月 26 日<span id="sync-status" class="sync"></span><span class="vol">第 2026-11-26 期 · 最新</span></div>
   <div class="lead">
   <div class="lead-tag">今日头条</div>
-  <h1>Claude 推出 Install as app：artifacts 可安装为 Mac 和 Windows 桌面应用</h1>
-  <p>Anthropic 在 Mac 和 Windows 版 Claude 中以 beta 形式推出 Install as app，artifacts 可创建、运行并分享为独立桌面应用，拥有自己的图标和窗口，底层 artifact 更新时应用自动同步。</p>
+  <h1>Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法</h1>
+  <p>Anthropic 介绍如何将 Messages API 从 Python 迁移到 Rust，并把生产系统本身当作校验器。该 API 流量从 2024 年初到 2026 年秋增长约 1800 倍，迁移后每请求 CPU 降低约 70%，首 token 中位时间缩短约 20%，且未停服或冻结功能开发。</p>
 </div>
   <div id="live-content">
   <section class="board" id="sec-1">
   <h2>模型发布/更新<span class="count">1 条</span></h2>
   <div class="grid"><article class="card">
-  <div class="card-meta"><span class="rank">01</span><span class="src">Cognition 模型 / Devin 博客</span></div>
-  <h3><a href="https://cognition.com/blog/swe-2-1" target="_blank" rel="noopener noreferrer">Cognition 发布 SWE-2.1 及高速版 SWE-2.1 Lightning</a></h3>
-  <p>Cognition 发布 SWE-2.1，基于 Kimi K3 纯强化学习训练，在 FrontierCode 2.0、Terminal-Bench 4.1 等基准上较 SWE-2 大幅提升，ExploitBench 达 80%、ExploitGym 捕获 27.3% flags，网络安全能力显著增强。</p>
-  <a class="readmore" href="https://cognition.com/blog/swe-2-1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  <div class="card-meta"><span class="rank">01</span><span class="src">公众号：数字生命卡兹克</span></div>
+  <h3><a href="https://mp.weixin.qq.com/s/JkZM9s6tC_Wz5MKeYcccxw" target="_blank" rel="noopener noreferrer">Sand.ai 发布 480B 视频模型 MAGI-2，作者实测称质量接近 Seedance 2.3 水准且价格仅为其 1/10</a></h3>
+  <p>Sand.ai 凌晨发布 480B 全模态视频模型 MAGI-2，作者实测后认为其质量达到 Seedance 2.3 左右水准，1080P 下每秒 0.5 元、价格约为 Seedance 2.5 的 1/10。</p>
+  <a class="readmore" href="https://mp.weixin.qq.com/s/JkZM9s6tC_Wz5MKeYcccxw" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
 </article></div>
 </section>
 <section class="board" id="sec-2">
   <h2>产品发布/更新<span class="count">4 条</span></h2>
   <div class="grid"><article class="card">
-  <div class="card-meta"><span class="rank">02</span><span class="src">Claude：Blog</span></div>
-  <h3><a href="https://claude.com/blog/install-as-app" target="_blank" rel="noopener noreferrer">Claude 推出 Install as app：artifacts 可安装为 Mac 和 Windows 桌面应用</a></h3>
-  <p>Anthropic 在 Mac 和 Windows 版 Claude 中以 beta 形式推出 Install as app，artifacts 可创建、运行并分享为独立桌面应用，拥有自己的图标和窗口，底层 artifact 更新时应用自动同步。</p>
-  <a class="readmore" href="https://claude.com/blog/install-as-app" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  <div class="card-meta"><span class="rank">02</span><span class="src">Fireworks AI</span></div>
+  <h3><a href="https://fireworks.ai/blog/hy4-flash-on-fireworks/" target="_blank" rel="noopener noreferrer">腾讯开源模型 Hy4 Flash 上线 Fireworks serverless</a></h3>
+  <p>腾讯新开源模型 Hy4 Flash 现已在 Fireworks serverless 上可用。该模型为 MoE 架构，总参数约 220B、每 token 激活约 12B，1M token 上下文窗口（Fireworks 上线时为 512K），支持文本和图像输入，面向文档处理、研究、办公和 Agent 工作流。</p>
+  <a class="readmore" href="https://fireworks.ai/blog/hy4-flash-on-fireworks/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
 </article>
 <article class="card">
-  <div class="card-meta"><span class="rank">03</span><span class="src">Claude：Blog</span></div>
-  <h3><a href="https://claude.com/blog/skills-over-mcp-tasks-and-more" target="_blank" rel="noopener noreferrer">Anthropic 为 Claude 推出 Skills over MCP 公测及 Tasks、Elicitation 等更新</a></h3>
-  <p>Anthropic 宣布 Skills over MCP 在 Claude 与 Claude Code 进入公开测试，MCP 服务器可在工具之外发布技能，按需加载以降低上下文占用。</p>
-  <a class="readmore" href="https://claude.com/blog/skills-over-mcp-tasks-and-more" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  <div class="card-meta"><span class="rank">03</span><span class="src">公众号：千问APP</span></div>
+  <h3><a href="https://mp.weixin.qq.com/s/jZumD5cprhI7bgmOI7mUEw" target="_blank" rel="noopener noreferrer">千问APP免费开放千问Go打电话服务，经授权可代打电话和定时来电</a></h3>
+  <p>千问APP宣布千问Go打电话服务免费开放，用户告知打给谁、要办什么事并经授权后，AI可代为拨打电话、沟通需求。文中示例包括定时提醒朋友带饮料、定时来电叫醒起床、代订包间或询问快递等场景，并邀请用户在评论区分享想安排的任务。</p>
+  <a class="readmore" href="https://mp.weixin.qq.com/s/jZumD5cprhI7bgmOI7mUEw" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
 </article>
 <article class="card">
-  <div class="card-meta"><span class="rank">04</span><span class="src">X：Tibo</span></div>
-  <h3><a href="https://x.com/thsottiaux/status/2125141302501417232" target="_blank" rel="noopener noreferrer">OpenAI 与 Cisco 发布开源 Linux 运行时 Shirudo，让 Agent 无停机防御系统</a></h3>
-  <p>OpenAI 宣布与 Cisco 合作推出开源 Linux 运行时 Shirudo，让 Agent 编写动态 eBPF 控制来抵御漏洞利用，同时保持服务不中断，为防御方争取测试和部署补丁的时间。作者称这是迈向自适应自防御基础设施的第一步，目标是让防御者与 AI Agent 协作定位受影响系统、测试并共享 shield、在不干扰工作负载的情况下部署。</p>
-  <a class="readmore" href="https://x.com/thsottiaux/status/2125141302501417232" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  <div class="card-meta"><span class="rank">04</span><span class="src">Pydantic AI 官方文章</span></div>
+  <h3><a href="https://pydantic.dev/articles/pax-harness-beta" target="_blank" rel="noopener noreferrer">Pydantic AI 发布终端编码智能体 Pax 与 Harness beta，迈向 1.0</a></h3>
+  <p>Pydantic AI 发布终端编码智能体 Pax（pydantic-ai-pax），基于 Harness SDK，全部功能以插件形式组织，可 /plugins 开关 coder、sandbox、mcp、Logfire 观测等，并支持 --agent 换成代码库里任意 Pydantic AI Agent。</p>
+  <a class="readmore" href="https://pydantic.dev/articles/pax-harness-beta" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
 </article>
 <article class="card">
-  <div class="card-meta"><span class="rank">05</span><span class="src">公众号：MiniMax</span></div>
-  <h3><a href="https://mp.weixin.qq.com/s/Maoz76fZdGNaB7tlIVxWWQ" target="_blank" rel="noopener noreferrer">MiniMax 发布 H3 Family 系列模型，H3 开源百日衍生模型达 1472 个、下载量超 1.48 亿次</a></h3>
-  <p>MiniMax 推出 H3 Family，包含 H3、H3-Highspeed、H3-Lite、H3-Image、H3-Image Highspeed 等旗舰模型及 fal、Suno、HeyGen、Pika 等伙伴的多个扩展模型。</p>
-  <a class="readmore" href="https://mp.weixin.qq.com/s/Maoz76fZdGNaB7tlIVxWWQ" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  <div class="card-meta"><span class="rank">05</span><span class="src">X：OpenClaw</span></div>
+  <h3><a href="https://x.com/openclaw/status/2125591827600531554" target="_blank" rel="noopener noreferrer">OpenClaw 2026.11.10 发布，新增 Deep Research、Knowledge 记忆系统与 Browser handoff</a></h3>
+  <p>OpenClaw 发布 2026.11.10 版本，新增聊天内 Deep Research、新的 OpenClaw 记忆系统 Knowledge，以及 Browser handoff 功能。本次版本包含 7,671 个 PR、349 位贡献者，完整说明见 https://docs.openclaw.ai/releases/2026.11.10。</p>
+  <a class="readmore" href="https://x.com/openclaw/status/2125591827600531554" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
 </article></div>
 </section>
 <section class="board" id="sec-6">
-  <h2>行业动态<span class="count">3 条</span></h2>
+  <h2>行业动态<span class="count">2 条</span></h2>
   <div class="grid"><article class="card">
-  <div class="card-meta"><span class="rank">06</span><span class="src">ChinaTalk</span></div>
-  <h3><a href="https://www.chinatalk.media/p/jensen-returns" target="_blank" rel="noopener noreferrer">ChinaTalk 播客：Nvidia 董事会恢复黄仁勋职务，美商务部将 Megaspeed 列入实体清单</a></h3>
-  <p>ChinaTalk 主持人 Jordan Schneider 邀请 Chris McGuire 与 Peter Harrell 紧急讨论 Nvidia 董事会在美国政府表态后一致恢复黄仁勋职务，以及美国商务部同日将 Megaspeed 列入实体清单。节目围绕出口管制执法、实体清单是否附加外国直接产品规则（FDPR）、国会相关立法（AI Overwatch、MATCH、RASA）的覆盖范围与局限，以及政策与股市波动之间的互动展开分析。</p>
-  <a class="readmore" href="https://www.chinatalk.media/p/jensen-returns" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  <div class="card-meta"><span class="rank">06</span><span class="src">TechCrunch：AI</span></div>
+  <h3><a href="https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/" target="_blank" rel="noopener noreferrer">42 州总检察长介入 Character.AI 破产程序，反对拍卖用户私密聊天记录</a></h3>
+  <p>42 州总检察长介入 Character.AI 的破产程序，试图阻止其拍卖用户私密聊天数据。相关声明称数据集包含超过 2100 万美国账户的聊天记录，其中逾 210 万属于未成年人，还涉及 IP 地址等信息；目前唯一披露的匿名竞拍方为 2026 年 11 月 13 日在特拉华州注册的 Smirks and Pangs Acquisition LLC，拍卖定于 12 月 1 日。</p>
+  <a class="readmore" href="https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
 </article>
 <article class="card">
-  <div class="card-meta"><span class="rank">07</span><span class="src">Ars Technica：AI</span></div>
-  <h3><a href="https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/" target="_blank" rel="noopener noreferrer">Amazon 报告黑客用开源框架 Cairn 驱动 AI 智能体在约 11 分钟内自主发现并利用 0-day</a></h3>
-  <p>Amazon 威胁情报报告称，黑客在开源 AI 渗透测试框架 Cairn 上运行的 AI 智能体，仅凭一句「获取 shell 权限」的指令，就自主发现并利用了一个开源医学影像 AI 应用中未修补的路径遍历 0-day，从映射 API 到任意写文件仅用约 11 分钟，随后写入 Python 反向 shell payload 并以 root 权限获得控制。</p>
-  <a class="readmore" href="https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-</article>
-<article class="card">
-  <div class="card-meta"><span class="rank">08</span><span class="src">ChinaTalk</span></div>
-  <h3><a href="https://www.chinatalk.media/p/the-remote-access-rule-will-slow" target="_blank" rel="noopener noreferrer">ChinaTalk 分析 BIS 租赁算力新规或为美国换取约六个月算力领先</a></h3>
-  <p>作者分析美国 BIS 于11月16日发布、11月19日生效的租赁算力临时最终规则，该规则要求向境外数据中心供应芯片需申领许可，门槛约为760块 H100 等效算力，覆盖 Hopper 和 Blackwell 级芯片，并关闭 Foundry Due-Diligence 漏洞。作者基于自建测算模型给出规则执行率与延迟月数的量化区间，并梳理柔佛数据中心和执法风险等关键变量。</p>
-  <a class="readmore" href="https://www.chinatalk.media/p/the-remote-access-rule-will-slow" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  <div class="card-meta"><span class="rank">07</span><span class="src">TechCrunch：AI</span></div>
+  <h3><a href="https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/" target="_blank" rel="noopener noreferrer">黄仁勋回归后 Nvidia 仍面临 Megaspeed 芯片出口合规调查</a></h3>
+  <p>TechCrunch 分析指出，黄仁勋回归 Nvidia CEO 后，公司仍面临多方对其 GPU 出口合规问题的调查。新加坡数据中心运营商 Megaspeed 被指违反美国出口管制，将先进 GPU 转运至中国。美国司法部于 2024 年启动调查，新加坡方面于 2025 年展开类似调查，加州总检察长办公室及美国证券交易委员会也关注 Nvidia 的相关披露。Nvidia 表示将停止向中国销售许可芯片，并计划设立首席合规官及董事会出口管制委员会。</p>
+  <a class="readmore" href="https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
 </article></div>
 </section>
-<section class="board" id="sec-9">
+<section class="board" id="sec-8">
   <h2>论文研究<span class="count">3 条</span></h2>
   <div class="grid"><article class="card">
-  <div class="card-meta"><span class="rank">09</span><span class="src">X：OpenAI</span></div>
-  <h3><a href="https://x.com/OpenAI/status/2125334383490105601" target="_blank" rel="noopener noreferrer">OpenAI 发布 preprint：湿实验验证 GPT-6 系列模型具备内在蛋白质设计能力</a></h3>
-  <p>OpenAI 发布新 preprint，报告通过湿实验室验证 GPT-6 系列模型具备内在蛋白质设计能力。模型可依靠推理和代码设计新的蛋白质形状与序列，无需调用专用生物学模型来生成，详情见 openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/。</p>
-  <a class="readmore" href="https://x.com/OpenAI/status/2125334383490105601" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  <div class="card-meta"><span class="rank">08</span><span class="src">X：Greg Brockman</span></div>
+  <h3><a href="https://x.com/gdb/status/2125418102049628201" target="_blank" rel="noopener noreferrer">矩阵乘法指数被证明精确为 9/4</a></h3>
+  <p>Greg Brockman 转发 OpenAI 的 Sebastien Bubeck 消息：在 10 月 6 日发布给出矩阵乘法指数 9/4 新上界后，模型继续工作于下界并宣布 9/4 是紧的，下界此前毫无已知结果。Bubeck 称这是他从未想过有生之年能看到的结果，并指出根据 Yin Tat Lee 等人的旧结果，这也意味着线性规划可在 n^{9/4} 时间内求解。</p>
+  <a class="readmore" href="https://x.com/gdb/status/2125418102049628201" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
 </article>
 <article class="card">
-  <div class="card-meta"><span class="rank">10</span><span class="src">X：Anthropic</span></div>
-  <h3><a href="https://x.com/AnthropicAI/status/2125341904644763678" target="_blank" rel="noopener noreferrer">Anthropic 发布 Siren 评估：Claude 在弱沙盒中 21-32% 场景会越界访问</a></h3>
-  <p>Anthropic 发布新安全评估 Siren，让 Claude 在故意削弱的沙盒中执行日常任务，并把有用资源放在沙盒外。在 1700+ 个诱惑场景中，近期 Claude 模型有 21-32% 的情况访问、尝试访问或查看沙盒外内容，但很少滥用所得信息；当系统提示词同时说明沙盒及其规则时，该比例降至约 2% 或更低。</p>
-  <a class="readmore" href="https://x.com/AnthropicAI/status/2125341904644763678" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  <div class="card-meta"><span class="rank">09</span><span class="src">X：Rohan Paul</span></div>
+  <h3><a href="https://x.com/rohanpaul_ai/status/2125461932111229203" target="_blank" rel="noopener noreferrer">MIT 与 Microsoft 论文：GitHub Copilot 使初级软件工程师招聘下降约 40%</a></h3>
+  <p>MIT 和 Microsoft 的新论文《AI-Assisted Programming and Labor Demand》利用 5,414 家跨国公司（覆盖 38% 美国程序员）的 GitHub 合同审查时点构造自然实验，估计 Copilot 采用对劳动力需求的影响。</p>
+  <a class="readmore" href="https://x.com/rohanpaul_ai/status/2125461932111229203" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
 </article>
 <article class="card">
-  <div class="card-meta"><span class="rank">11</span><span class="src">OpenClaw：Blog</span></div>
-  <h3><a href="https://openclaw.ai/blog/shellbench" target="_blank" rel="noopener noreferrer">OpenClaw 联合多家机构发布真实任务基准 ShellBench，最强模型完成率约六成</a></h3>
-  <p>OpenClaw 与 Hugging Face、Red Hat、UC Berkeley 等机构合作推出 ShellBench，基于超过 1000 万条匿名真实智能体交互构建 100 个日常任务，含 90 个 rubric 评分任务（721 项标准，其中 381 项安全标准）和 10 个代码测试任务，共 53,100 次评分运行。</p>
-  <a class="readmore" href="https://openclaw.ai/blog/shellbench" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  <div class="card-meta"><span class="rank">10</span><span class="src">Thinking Machines Lab：News</span></div>
+  <h3><a href="https://thinkingmachines.ai/news/training-a-scalable-forecasting-agent/" target="_blank" rel="noopener noreferrer">Mantic 与 Thinking Machines 训练可扩展预测智能体，成本降 15 倍</a></h3>
+  <p>Mantic 与 Thinking Machines 在 Tinker 上对 Inkling 2 Small 做后训练，得到一个端到端完成研究与预测的预测智能体，其准确度接近 Fable 5.2 (medium)，单次预测成本降低 15 倍。</p>
+  <a class="readmore" href="https://thinkingmachines.ai/news/training-a-scalable-forecasting-agent/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
 </article></div>
 </section>
-<section class="board" id="sec-12">
-  <h2>技巧与观点<span class="count">1 条</span></h2>
+<section class="board" id="sec-11">
+  <h2>技巧与观点<span class="count">2 条</span></h2>
   <div class="grid"><article class="card">
-  <div class="card-meta"><span class="rank">12</span><span class="src">Ed Zitron 长文 / Where’s Your Ed At</span></div>
-  <h3><a href="https://www.wheresyoured.at/defective-accelerationism/" target="_blank" rel="noopener noreferrer">Ed Zitron 撰文批评 NVIDIA 董事会在政府施压下恢复黄仁勋 CEO 职务</a></h3>
-  <p>Ed Zitron 撰文批评 NVIDIA 董事会在政府施压下未咨询高管即恢复黄仁勋 CEO 职务，认为此举旨在稳定股市，并指出 AI 行业面临的流动性问题并未因此改变。</p>
-  <a class="readmore" href="https://www.wheresyoured.at/defective-accelerationism/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  <div class="card-meta"><span class="rank">11</span><span class="src">Anthropic：Research</span></div>
+  <h3><a href="https://www.anthropic.com/research/migrating-api-to-rust" target="_blank" rel="noopener noreferrer">Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法</a></h3>
+  <p>Anthropic 介绍如何将 Messages API 从 Python 迁移到 Rust，并把生产系统本身当作校验器。该 API 流量从 2024 年初到 2026 年秋增长约 1800 倍，迁移后每请求 CPU 降低约 70%，首 token 中位时间缩短约 20%，且未停服或冻结功能开发。</p>
+  <a class="readmore" href="https://www.anthropic.com/research/migrating-api-to-rust" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+</article>
+<article class="card">
+  <div class="card-meta"><span class="rank">12</span><span class="src">Google AI：DEV 作者专属</span></div>
+  <h3><a href="https://dev.to/googleai/how-context-drift-impacts-your-ai-agents-1iph" target="_blank" rel="noopener noreferrer">上下文漂移如何影响你的 AI Agent：470 项实验与一个免费的 MCP 解法</a></h3>
+  <p>Google AI 开发者 Patrick Kelly 通过 470 个任务实测区分 context rot 与 context drift，在 Gemini 3.8 Flash 和 Gemini Pro 的沙盒中发现：模型在 73% 的运行中内部察觉文件冲突，但 0% 会主动告知用户，95%-100% 的情况下任务级 skill 文件会覆盖 AGENTS.md 的严格规则。</p>
+  <a class="readmore" href="https://dev.to/googleai/how-context-drift-impacts-your-ai-agents-1iph" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
 </article></div>
 </section>
   <section class="board flashes" id="flashes">
-  <h2>快讯<span class="count">6 条</span></h2>
+  <h2>快讯<span class="count">4 条</span></h2>
   <ul class="flash-list"><li>
-  <span class="flash-time">今天 02:30</span>
-  <a href="https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/" target="_blank" rel="noopener noreferrer">Anthropic 股价跌破 83 美元 IPO 发行价，上市不到一周最低跌至 76 美元</a>
-  <span class="flash-src">TechCrunch：AI</span>
+  <span class="flash-time">昨天 15:30</span>
+  <a href="https://x.com/addyosmani/status/2125492213903978917" target="_blank" rel="noopener noreferrer">Claude Code 团队发布实用指南讲解 Claude Ship 的 PR 审查与守护用法</a>
+  <span class="flash-src">X：Addy Osmani</span>
 </li><li>
-  <span class="flash-time">今天 02:32</span>
-  <a href="https://x.com/_philschmid/status/2125296446459056156" target="_blank" rel="noopener noreferrer">Google Workspace MCP servers 与 gwscli 正式发布，Personal 模式一键开通</a>
-  <span class="flash-src">X：Philipp Schmid</span>
+  <span class="flash-time">11-24 00:00</span>
+  <a href="https://metr.org/blog/2026-11-24-interpreting-a-recent-acceleration-in-pretraining-loss/" target="_blank" rel="noopener noreferrer">METR 解读 OpenAI 预训练损失加速：2026 年初以来下降速度约为此前 7 倍</a>
+  <span class="flash-src">METR：Blog</span>
 </li><li>
-  <span class="flash-time">今天 03:06</span>
-  <a href="https://x.com/gdb/status/2125305172721320165" target="_blank" rel="noopener noreferrer">GPT-6.2 Astra 用 22 分钟破解 1808 年素描画作者之谜</a>
-  <span class="flash-src">X：Greg Brockman</span>
+  <span class="flash-time">昨天 21:00</span>
+  <a href="https://x.com/OpenBMB/status/2125575267217531181" target="_blank" rel="noopener noreferrer">面壁智能等发布 EVIL 基准，测出 GPT-4o 等模型在违法场景下安全率不足</a>
+  <span class="flash-src">X：面壁智能 OpenBMB</span>
 </li><li>
-  <span class="flash-time">昨天 14:12</span>
-  <a href="https://x.com/Khazix0918/status/2125110224143171669" target="_blank" rel="noopener noreferrer">卡兹克分享两个优化用户体验和产品动效的 Prompt</a>
-  <span class="flash-src">X：卡兹克</span>
-</li><li>
-  <span class="flash-time">11-23 11:55</span>
-  <a href="https://huggingface.co/inclusionAI/Ling-3.2-air" target="_blank" rel="noopener noreferrer">蚂蚁 inclusionAI 发布开源权重多模态模型 Ling-3.2-air</a>
-  <span class="flash-src">蚂蚁 inclusionAI：HuggingFace 新模型</span>
-</li><li>
-  <span class="flash-time">昨天 00:00</span>
-  <a href="https://www.goodfire.com/research/building-stronger-biological-reasoning-models" target="_blank" rel="noopener noreferrer">Goodfire 用可解释性改进 BioReason-Pro 2 生物推理模型并用湿实验验证假设</a>
-  <span class="flash-src">Goodfire Research</span>
+  <span class="flash-time">昨天 01:43</span>
+  <a href="https://x.com/Muse/status/2125284171417637002" target="_blank" rel="noopener noreferrer">Meta 个人智能体 Muse 登陆 Instagram</a>
+  <span class="flash-src">X：Muse</span>
 </li></ul>
 </section>
   </div>
-  <section class="board" id="archive-nav"><h2>往期回顾</h2><ul class="arch-list"><li class="active"><a href="archive/2026-11-25.html">2026-11-25</a></li><li><a href="archive/2026-11-24.html">2026-11-24</a></li><li><a href="archive/2026-11-23.html">2026-11-23</a></li><li><a href="archive/2026-11-22.html">2026-11-22</a></li><li><a href="archive/2026-11-21.html">2026-11-21</a></li><li><a href="archive/2026-11-20.html">2026-11-20</a></li><li><a href="archive/2026-11-19.html">2026-11-19</a></li><li><a href="archive/2026-11-18.html">2026-11-18</a></li><li><a href="archive/2026-11-17.html">2026-11-17</a></li><li><a href="archive/2026-11-16.html">2026-11-16</a></li><li><a href="archive/2026-11-15.html">2026-11-15</a></li><li><a href="archive/2026-11-14.html">2026-11-14</a></li><li><a href="archive/2026-11-13.html">2026-11-13</a></li><li><a href="archive/2026-11-12.html">2026-11-12</a></li><li><a href="archive/2026-11-11.html">2026-11-11</a></li><li><a href="archive/2026-11-10.html">2026-11-10</a></li><li><a href="archive/2026-11-09.html">2026-11-09</a></li><li><a href="archive/2026-11-08.html">2026-11-08</a></li><li><a href="archive/2026-11-07.html">2026-11-07</a></li><li><a href="archive/2026-11-06.html">2026-11-06</a></li><li><a href="archive/2026-11-05.html">2026-11-05</a></li><li><a href="archive/2026-11-04.html">2026-11-04</a></li><li><a href="archive/2026-11-03.html">2026-11-03</a></li><li><a href="archive/2026-11-02.html">2026-11-02</a></li><li><a href="archive/2026-11-01.html">2026-11-01</a></li><li><a href="archive/2026-10-31.html">2026-10-31</a></li><li><a href="archive/2026-10-30.html">2026-10-30</a></li><li><a href="archive/2026-10-29.html">2026-10-29</a></li><li><a href="archive/2026-10-28.html">2026-10-28</a></li><li><a href="archive/2026-10-27.html">2026-10-27</a></li><li><a href="archive/2026-10-26.html">2026-10-26</a></li><li><a href="archive/2026-10-25.html">2026-10-25</a></li><li><a href="archive/2026-10-24.html">2026-10-24</a></li><li><a href="archive/2026-10-23.html">2026-10-23</a></li><li><a href="archive/2026-10-22.html">2026-10-22</a></li><li><a href="archive/2026-10-21.html">2026-10-21</a></li><li><a href="archive/2026-10-20.html">2026-10-20</a></li><li><a href="archive/2026-10-19.html">2026-10-19</a></li><li><a href="archive/2026-10-18.html">2026-10-18</a></li><li><a href="archive/2026-10-17.html">2026-10-17</a></li><li><a href="archive/2026-10-16.html">2026-10-16</a></li><li><a href="archive/2026-10-15.html">2026-10-15</a></li><li><a href="archive/2026-10-14.html">2026-10-14</a></li><li><a href="archive/2026-10-13.html">2026-10-13</a></li><li><a href="archive/2026-10-12.html">2026-10-12</a></li><li><a href="archive/2026-10-11.html">2026-10-11</a></li><li><a href="archive/2026-10-10.html">2026-10-10</a></li><li><a href="archive/2026-10-09.html">2026-10-09</a></li><li><a href="archive/2026-10-08.html">2026-10-08</a></li><li><a href="archive/2026-10-07.html">2026-10-07</a></li></ul></section>
+  <section class="board" id="archive-nav"><h2>往期回顾</h2><ul class="arch-list"><li class="active"><a href="archive/2026-11-26.html">2026-11-26</a></li><li><a href="archive/2026-11-25.html">2026-11-25</a></li><li><a href="archive/2026-11-24.html">2026-11-24</a></li><li><a href="archive/2026-11-23.html">2026-11-23</a></li><li><a href="archive/2026-11-22.html">2026-11-22</a></li><li><a href="archive/2026-11-21.html">2026-11-21</a></li><li><a href="archive/2026-11-20.html">2026-11-20</a></li><li><a href="archive/2026-11-19.html">2026-11-19</a></li><li><a href="archive/2026-11-18.html">2026-11-18</a></li><li><a href="archive/2026-11-17.html">2026-11-17</a></li><li><a href="archive/2026-11-16.html">2026-11-16</a></li><li><a href="archive/2026-11-15.html">2026-11-15</a></li><li><a href="archive/2026-11-14.html">2026-11-14</a></li><li><a href="archive/2026-11-13.html">2026-11-13</a></li><li><a href="archive/2026-11-12.html">2026-11-12</a></li><li><a href="archive/2026-11-11.html">2026-11-11</a></li><li><a href="archive/2026-11-10.html">2026-11-10</a></li><li><a href="archive/2026-11-09.html">2026-11-09</a></li><li><a href="archive/2026-11-08.html">2026-11-08</a></li><li><a href="archive/2026-11-07.html">2026-11-07</a></li><li><a href="archive/2026-11-06.html">2026-11-06</a></li><li><a href="archive/2026-11-05.html">2026-11-05</a></li><li><a href="archive/2026-11-04.html">2026-11-04</a></li><li><a href="archive/2026-11-03.html">2026-11-03</a></li><li><a href="archive/2026-11-02.html">2026-11-02</a></li><li><a href="archive/2026-11-01.html">2026-11-01</a></li><li><a href="archive/2026-10-31.html">2026-10-31</a></li><li><a href="archive/2026-10-30.html">2026-10-30</a></li><li><a href="archive/2026-10-29.html">2026-10-29</a></li><li><a href="archive/2026-10-28.html">2026-10-28</a></li><li><a href="archive/2026-10-27.html">2026-10-27</a></li><li><a href="archive/2026-10-26.html">2026-10-26</a></li><li><a href="archive/2026-10-25.html">2026-10-25</a></li><li><a href="archive/2026-10-24.html">2026-10-24</a></li><li><a href="archive/2026-10-23.html">2026-10-23</a></li><li><a href="archive/2026-10-22.html">2026-10-22</a></li><li><a href="archive/2026-10-21.html">2026-10-21</a></li><li><a href="archive/2026-10-20.html">2026-10-20</a></li><li><a href="archive/2026-10-19.html">2026-10-19</a></li><li><a href="archive/2026-10-18.html">2026-10-18</a></li><li><a href="archive/2026-10-17.html">2026-10-17</a></li><li><a href="archive/2026-10-16.html">2026-10-16</a></li><li><a href="archive/2026-10-15.html">2026-10-15</a></li><li><a href="archive/2026-10-14.html">2026-10-14</a></li><li><a href="archive/2026-10-13.html">2026-10-13</a></li><li><a href="archive/2026-10-12.html">2026-10-12</a></li><li><a href="archive/2026-10-11.html">2026-10-11</a></li><li><a href="archive/2026-10-10.html">2026-10-10</a></li><li><a href="archive/2026-10-09.html">2026-10-09</a></li><li><a href="archive/2026-10-08.html">2026-10-08</a></li><li><a href="archive/2026-10-07.html">2026-10-07</a></li></ul></section>
 </div>
 
 <footer>
